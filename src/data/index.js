@@ -604,6 +604,90 @@ const tableData = {
   ],
 };
 
+const modal = {
+  alert: {
+    upload_size_warningAlert: {
+      alertMessageEn: "Up to 100MB can be Uploaded.",
+      alertMessageKr: "최대 100MB까지 등록 가능합니다.",
+    },
+    upload_successAlert: {
+      alertMessageEn: "Saved.",
+      alertMessageKr: "저장되었습니다.",
+    },
+    investChange_message: {
+      valueEn: "Would you like to change your investment type?",
+      valueKr: "투자유형을 변경하시겠습니까?",
+    },
+  },
+  buttons: {
+    ok: {
+      valueEn: "Ok",
+      valueKr: "확인",
+    },
+    save: {
+      valueEn: "Save",
+      valueKr: "저장",
+    },
+    cancel: {
+      valueEn: "Cancel",
+      valueKr: "취소",
+    },
+  },
+  investment: {
+    title: { titleEn: "Change investment type", titleKr: "투자유형 변경" },
+    labels: [
+      {
+        valueEn: "Membership number",
+        valueKr: "회원번호",
+      },
+      {
+        valueEn: "Member name/corporation name",
+        valueKr: "회원명/법인명",
+      },
+      {
+        valueEn: "Deposit balance",
+        valueKr: "예치금잔액",
+      },
+      {
+        valueEn: "Number of investments",
+        valueKr: "투자건수",
+      },
+    ],
+    labelsValue: [
+      {
+        valueEn: "abc111",
+        valueKr: "abc111",
+      },
+      {
+        valueEn: "Kim Gil-dong",
+        valueKr: "김길동",
+      },
+      {
+        select: {
+          valueEn: "Select",
+          valueKr: "선택",
+        },
+        selectedFiles: ["사업자등록증1.jpg", "서류1.jpg"],
+      },
+      {
+        valueEn: "Membership number",
+        valueKr: "회원번호",
+      },
+    ],
+    uploadSuggestions: [
+      {
+        valueEn:
+          "The only file formats available are jpg, jpeg, gif, png, and pdf.",
+        valueKr: "파일 형식은 jpg, jpeg, gif, png, pdf만 가능합니다.",
+      },
+      {
+        valueEn: "You can upload up to 10 items and up to 100MB.",
+        valueKr: "최대 10개, 100MB까지 등록이 가능합니다.",
+      },
+    ],
+  },
+};
+
 const data = {
   tabs: [
     {
@@ -702,6 +786,7 @@ const data = {
     { en: "Consultation history management", kr: "상담내역 관리" },
     { en: "1:1 inquiry history", kr: "1:1문의내역 조회" },
   ],
+  modal,
 };
 
 export default data;

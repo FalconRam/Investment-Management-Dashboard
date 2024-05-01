@@ -5,16 +5,26 @@
     min-width: 100%;
     text-align: start;
     overflow-x: auto;
+    display: block;
+    scroll-behavior: smooth;
 }
 
-.styled-table thead {
-    min-width: max-content;
-    text-wrap: nowrap;
+/* For WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    height: 8px;
 }
 
-.styled-table thead tr {
-    background-color: #EEF0F4;
-    color: #222;
+/* Track */
+.styled-table::-webkit-scrollbar-track {
+    background: #E6E8EA;
+    border-radius: 20px;
+}
+
+/* Handle */
+.styled-table::-webkit-scrollbar-thumb {
+    background: #6F80A0;
+    border-radius: 20px;
+    max-width: 9px;
 }
 
 /* .styled-table thead tr th input {
@@ -38,16 +48,25 @@
     height: 1rem;
 }
 
+/* Existing type Col */
+.styled-table thead tr th:nth-child(3) {
+    min-width: 7rem;
+}
+
 /* Type & Docs Required col */
 .styled-table thead tr th:nth-child(4),
 .styled-table thead tr th:nth-child(5) {
-    min-width: 84px;
+    min-width: 7rem;
 }
 
 /* Timestamp col */
 .styled-table thead tr th:nth-child(6),
 .styled-table thead tr th:nth-child(9) {
     min-width: 180px;
+}
+
+.styled-table thead tr th:nth-child(7) {
+    min-width: 6.5rem;
 }
 
 /* Rejection Reason col */
@@ -70,6 +89,7 @@
     border: 1px solid #fff;
     font-size: 16px;
     font-weight: 600;
+    background-color: #EEF0F4;
 }
 
 .styled-table tbody tr {
@@ -138,6 +158,7 @@
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    margin-bottom: 12px;
 }
 
 .left-arrow {

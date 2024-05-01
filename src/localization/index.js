@@ -3,4 +3,10 @@ const locale = {
   kr: "kr",
 };
 
-export { locale };
+const statusDesc = {
+  approved: "Approved",
+  waiting: "Waiting",
+  rejected: "Rejected",
+};
+
+export { locale, statusDesc };
