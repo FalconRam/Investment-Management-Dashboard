@@ -1,0 +1,73 @@
+/* Dropdown Button */
+.drop-btn {
+    background-color: #fff;
+    width: 9.384rem;
+    /* height: 1.875rem; */
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* container <div> needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 9.384rem;
+    /* height: 1.875rem; */
+    margin-top: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+
+}
+
+/* Dropdown Items */
+.dropdown-content span {
+    color: black;
+    display: block;
+    padding: 6px 46px 6px 16px;
+    background-color: #fff;
+    font-weight: 500;
+    line-height: 21px;
+    font-size: 0.875rem;
+}
+
+/* dropdown item on selected */
+.dropdown-content span:nth-child(1) {
+    background-color: rgb(41, 57, 88);
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+/* dropdown items on hover */
+.dropdown-content span:hover {
+    background-color: rgb(41, 57, 88);
+    color: #fff;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown-arrow {
+    width: 0.697rem;
+    height: 0.409rem;
+    margin-left: 1rem;
+}
+
+.dropdown-arrow-rotate {
+    transform: rotate(180deg);
+}

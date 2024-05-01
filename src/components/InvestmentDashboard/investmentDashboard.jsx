@@ -1,26 +1,16 @@
 import React from "react";
 
+import Tabs from "../Tabs/tabs";
+import ApplicationTable from "../ApplicationTable/applicationTable";
+
 import "./investmentDashboard.css";
 
-const InvestmentDashboard = ({ lang, appData, locale }) => {
-  console.log(appData);
+const InvestmentDashboard = ({ isEn, appData }) => {
   return (
     <>
-      <div>
-        <div className="tabs">
-          {appData.tabs.map((tab, index) => (
-            <>
-              <div
-                key={index}
-                className={index == 1 ? "active-tab" : "inactive-tab"}
-              >
-                <p className="tab-name">
-                  {lang === locale.en ? tab.en : tab.kr}
-                </p>
-              </div>
-            </>
-          ))}
-        </div>
+      <div className="dashboard-container">
+        <Tabs tabs={appData.tabs} isEn={isEn} />
+        <ApplicationTable applicationData={appData.tabs[1]} isEn={isEn} />
       </div>
     </>
   );

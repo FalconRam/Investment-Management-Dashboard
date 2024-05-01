@@ -10,11 +10,14 @@ import "./App.css";
 
 function App() {
   const [lang, setLang] = useState(locale.en);
-  console.log(lang);
   return (
     <div className="">
-      <NavBar lang={lang} setLang={setLang} locale={locale} />
-      <InvestmentDashboard lang={lang} appData={data} locale={locale} />
+      <NavBar setLang={setLang} isEn={lang === locale.en} locale={locale} />
+      <InvestmentDashboard
+        isEn={lang === locale.en}
+        appData={data}
+        locale={locale}
+      />
     </div>
   );
 }
