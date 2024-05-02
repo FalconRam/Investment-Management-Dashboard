@@ -18,8 +18,8 @@ const UploadModal = ({ isEn, setUploadModal }) => {
     setOpenSuccessModal(true);
   };
   return (
-    <div className="modal-overlay">
-      <div className="modal modal-upload">
+    <div className="modal-upload-overlay">
+      <div className="modal-upload">
         <div className="modal-upload-top">
           <div className="modal-upload-img-close">
             <p className="modal-title">
