@@ -5,21 +5,20 @@ import leftArrow from "../../assets/leftarrow.png";
 import leftDoubleArrow from "../../assets/leftdoublearrow.png";
 import { statusDesc } from "../../localization";
 import { tagStatus } from "../../utils";
-import AlertModal from "../Modal/Alert/alertModal";
 import UploadModal from "../Modal/Upload/uploadModal";
 
 const Table = ({ tableData, isEn }) => {
   const { columnNames, rowDatas, pagination } = tableData;
 
-  const handleAttachDocs = () => {};
+  // const handleAttachDocs = () => {};
 
   const [disableItems, setDisabledItems] = useState(
     Array(rowDatas.length + 1).fill(0)
   );
 
   function setDisableDriver(rowDatas) {
-    rowDatas.map((data, rowIndex) => {
-      Object.values(data).map((item) => {
+    rowDatas.forEach((data, rowIndex) => {
+      Object.values(data).forEach((item) => {
         if (
           disableItems[rowIndex] === 0 &&
           (item.valueEn === statusDesc.approved ||
@@ -37,13 +36,12 @@ const Table = ({ tableData, isEn }) => {
 
   useEffect(() => {
     setDisableDriver(rowDatas);
+    // eslint-disable-next-line
   }, [rowDatas]);
 
-  const [modalContent, setModalContent] = useState(null);
   const [uploadModal, setUploadModal] = useState(false);
 
   const handleViewModal = () => {
-    // setModalContent(content);
     setUploadModal(true);
   };
 

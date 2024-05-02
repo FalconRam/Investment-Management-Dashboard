@@ -15,12 +15,8 @@ const AlertModal = ({
   setOpenSuccessModal,
   setUploadModal,
 }) => {
-  const {
-    upload_size_warningAlert,
-    upload_successAlert,
-    investChange_message,
-  } = data.modal.alert;
-  const { ok, cancel } = data.modal.buttons;
+  const { upload_size_warningAlert, upload_successAlert } = data.modal.alert;
+  const { ok } = data.modal.buttons;
   const closeModal = () => {
     if (isSuccess) {
       setOpenSuccessModal(false);
