@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./uploadModal.css";
 
 import data from "../../../data";
 
 import close from "../../../assets/close.png";
-import circle_close from "../../../assets/circle-close.png";
+import UploadTable from "./uploadTable";
+import AlertModal from "../Alert/alertModal";
 
 const UploadModal = ({ isEn, setUploadModal }) => {
   const { investment, buttons } = data.modal;
+  const [openSuccessModal, setOpenSuccessModal] = useState(false);
   const closeModal = () => {
-    setUploadModal(null);
+    setUploadModal(false);
+  };
+  const handlSave = () => {
+    setOpenSuccessModal(true);
   };
   return (
     <div className="modal-overlay">
@@ -24,45 +29,34 @@ const UploadModal = ({ isEn, setUploadModal }) => {
               <img src={close} alt="Close" className="close-btn-img" />
             </button>
           </div>
-          {/* <p className="modal-upload-content">
-            {isEn
-              ? upload_size_warningAlert.alertMessageEn
-              : upload_size_warningAlert.alertMessageKr}
-          </p> */}
+          <div className="divider-modal" />
         </div>
-        <div className="divider-modal" />
-        <div className="modal-btn-middle">
-          <table>
-            <tbody>
-              {investment.labels.map((label, index) => (
-                <tr key={index} className="table-col">
-                  <td>{isEn ? label.valueEn : label.valueKr}</td>
-                </tr>
-              ))}
-              {investment.labelsValue.map((labelValue, index) => {
-                console.log(labelValue);
-                index <= 1 || index === 3 ? (
-                  <tr key={index} className="table-col">
-                    <td>{isEn ? labelValue.valueEn : labelValue.valueKr}</td>
-                  </tr>
-                ) : (
-                  <tr key={index} className="table-col">
-                    <td>{isEn ? labelValue.valueEn : labelValue.valueKr}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        <div className="modal-upload-middle">
+          <UploadTable investment={investment} isEn={isEn} />
+          <ul className="modal-upload-suggestions">
+            {investment.uploadSuggestions.map((item, index) => (
+              <li key={index}>{isEn ? item.valueEn : item.valueKr}</li>
+            ))}
+          </ul>
         </div>
-        <div className="modal-upload-btn-bottom">
+        <div className="divider-modal divider_modal_2" />
+        <div className="modal-upload-btn-bottom" onClick={handlSave}>
           <button className="ok-btn">
             {isEn ? buttons.save.valueEn : buttons.save.valueKr}
           </button>
-          <button className="ok-btn cancel-btn">
+          <button className="ok-btn cancel-btn" onClick={closeModal}>
             {isEn ? buttons.cancel.valueEn : buttons.cancel.valueKr}
           </button>
         </div>
       </div>
+      {openSuccessModal && (
+        <AlertModal
+          isEn={isEn}
+          isSuccess={true}
+          setOpenSuccessModal={setOpenSuccessModal}
+          setUploadModal={setUploadModal}
+        />
+      )}
     </div>
   );
 };

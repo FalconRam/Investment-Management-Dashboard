@@ -9,16 +9,16 @@ import { locale } from "./localization";
 import "./App.css";
 
 function App() {
-  const [lang, setLang] = useState(locale.en);
+  const [lang, setLang] = useState(locale.kr); // Set Lang for App
   return (
-    <div className="">
+    <>
       <NavBar setLang={setLang} isEn={lang === locale.en} locale={locale} />
       <InvestmentDashboard
         isEn={lang === locale.en}
         appData={data}
         locale={locale}
       />
-    </div>
+    </>
   );
 }
 

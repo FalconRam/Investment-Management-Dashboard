@@ -639,39 +639,41 @@ const modal = {
       {
         valueEn: "Membership number",
         valueKr: "회원번호",
-      },
-      {
-        valueEn: "Member name/corporation name",
-        valueKr: "회원명/법인명",
-      },
-      {
-        valueEn: "Deposit balance",
-        valueKr: "예치금잔액",
-      },
-      {
-        valueEn: "Number of investments",
-        valueKr: "투자건수",
-      },
-    ],
-    labelsValue: [
-      {
-        valueEn: "abc111",
-        valueKr: "abc111",
-      },
-      {
-        valueEn: "Kim Gil-dong",
-        valueKr: "김길동",
-      },
-      {
-        select: {
-          valueEn: "Select",
-          valueKr: "선택",
+        labelValue: {
+          valueEn: "abc111",
+          valueKr: "abc111",
         },
-        selectedFiles: ["사업자등록증1.jpg", "서류1.jpg"],
       },
       {
-        valueEn: "Membership number",
-        valueKr: "회원번호",
+        valueEn: "Member name",
+        valueKr: "회원명/법인명",
+        labelValue: {
+          valueEn: "Kim Gil-dong",
+          valueKr: "김길동",
+        },
+      },
+      {
+        valueEn: "Investment Type",
+        valueKr: "예치금잔액",
+        labelValue: {
+          types: [
+            { valueEn: "General Individual", valueKr: "일반개인" },
+            { valueEn: "Personal Expertise", valueKr: "개인전문" },
+            { valueEn: "Corporation", valueKr: "법인" },
+            { valueEn: "P2P Onto", valueKr: "P2P온투" },
+          ],
+        },
+      },
+      {
+        valueEn: "Attach documents",
+        valueKr: "투자건수",
+        labelValue: {
+          select: {
+            valueEn: "Select",
+            valueKr: "선택",
+          },
+          selectedFiles: ["사업자등록증1.jpg", "서류1.jpg"],
+        },
       },
     ],
     uploadSuggestions: [

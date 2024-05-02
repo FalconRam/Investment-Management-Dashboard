@@ -1,0 +1,27 @@
+.drop-btn-investment {
+    min-width: 282.15px;
+    justify-content: space-between;
+    min-height: 37px !important;
+}
+
+.dropdown-investment {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+/* Dropdown Items */
+.dropdown-investment-content {
+    min-width: 282.15px;
+border-radius: 18px;
+}
+
+.dropdown-investment-content span {
+    color: black;
+    display: block;
+    padding: 6px 46px 6px 16px;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 21px;
+    font-size: 14px;
+}

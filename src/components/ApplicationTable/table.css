@@ -1,4 +1,4 @@
-.styled-table {
+.application-table {
     border-collapse: collapse;
     margin: 4px 0 12px 0;
     font-size: 0.9em;
@@ -15,27 +15,27 @@
 }
 
 /* Track */
-.styled-table::-webkit-scrollbar-track {
+.application-table::-webkit-scrollbar-track {
     background: #E6E8EA;
     border-radius: 20px;
 }
 
 /* Handle */
-.styled-table::-webkit-scrollbar-thumb {
+.application-table::-webkit-scrollbar-thumb {
     background: #6F80A0;
     border-radius: 20px;
     max-width: 9px;
 }
 
-/* .styled-table thead tr th input {
+/* .application-table thead tr th input {
     width: 1rem;
     height: 1rem;
     border: 0.5px solid #D7D8DA;
     border-radius: 4px;
 } */
 
-.styled-table thead tr th input[type="checkbox" i],
-.styled-table tbody tr td input[type="checkbox" i] {
+.application-table thead tr th input[type="checkbox" i],
+.application-table tbody tr td input[type="checkbox" i] {
     background-color: initial;
     cursor: default;
     appearance: auto;
@@ -49,54 +49,53 @@
 }
 
 /* Existing type Col */
-.styled-table thead tr th:nth-child(3) {
+.application-table thead tr th:nth-child(3) {
     min-width: 7rem;
 }
 
 /* Type & Docs Required col */
-.styled-table thead tr th:nth-child(4),
-.styled-table thead tr th:nth-child(5) {
+.application-table thead tr th:nth-child(4),
+.application-table thead tr th:nth-child(5) {
     min-width: 7rem;
 }
 
 /* Timestamp col */
-.styled-table thead tr th:nth-child(6),
-.styled-table thead tr th:nth-child(9) {
+.application-table thead tr th:nth-child(6),
+.application-table thead tr th:nth-child(9) {
     min-width: 180px;
 }
 
-.styled-table thead tr th:nth-child(7) {
+.application-table thead tr th:nth-child(7) {
     min-width: 6.5rem;
 }
 
 /* Rejection Reason col */
-.styled-table thead tr th:nth-child(8) {
+.application-table thead tr th:nth-child(8) {
     min-width: 355px;
 }
 
 /* Manger col */
-.styled-table thead tr th:nth-child(10) {
+.application-table thead tr th:nth-child(10) {
     min-width: 136px;
 }
 
-.styled-table th,
-.styled-table td {
+.application-table th,
+.application-table td {
     padding: 12px 15px;
-
 }
 
-.styled-table th {
+.application-table th {
     border: 1px solid #fff;
     font-size: 16px;
     font-weight: 600;
     background-color: #EEF0F4;
 }
 
-.styled-table tbody tr {
+.application-table tbody tr {
     height: 2.75rem;
 }
 
-.styled-table tbody tr td {
+.application-table tbody tr td {
     text-wrap: wrap;
     font-size: 14px;
     font-weight: 500;
@@ -104,12 +103,12 @@
     text-align: center;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
+.application-table tbody tr:nth-of-type(even) {
     background-color: #F9F9FB;
 }
 
 /* Rejection Reason */
-.styled-table tbody tr td:nth-child(8) {
+.application-table tbody tr td:nth-child(8) {
     text-align: start;
 }
 

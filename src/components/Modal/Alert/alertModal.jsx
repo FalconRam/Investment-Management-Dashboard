@@ -8,7 +8,13 @@ import close from "../../../assets/close.png";
 import warning_alert from "../../../assets/warning-alert.png";
 import success_alert from "../../../assets/success-alert.png";
 
-const AlertModal = ({ modalContent, setModalContent, isEn }) => {
+const AlertModal = ({
+  setError,
+  isEn,
+  isSuccess,
+  setOpenSuccessModal,
+  setUploadModal,
+}) => {
   const {
     upload_size_warningAlert,
     upload_successAlert,
@@ -16,26 +22,49 @@ const AlertModal = ({ modalContent, setModalContent, isEn }) => {
   } = data.modal.alert;
   const { ok, cancel } = data.modal.buttons;
   const closeModal = () => {
-    setModalContent(null);
+    if (isSuccess) {
+      setOpenSuccessModal(false);
+      setUploadModal(false);
+      return;
+    }
+    setError({
+      invalidFormats: false,
+      filesCountExceeds: false,
+      fileSizeExceeds: false,
+    });
   };
   return (
     <div className="modal-overlay">
       <div className="modal">
         <div className="modal-top">
           <div className="modal-img-close">
-            <img src={warning_alert} alt="Alert" className="alert-btn-img" />
+            {isSuccess ? (
+              <img src={success_alert} alt="Alert" className="alert-btn-img" />
+            ) : (
+              <img src={warning_alert} alt="Alert" className="alert-btn-img" />
+            )}
             <button className="close-btn" onClick={closeModal}>
               <img src={close} alt="Close" className="close-btn-img" />
             </button>
           </div>
-          <p className="modal-content">
-            {isEn
-              ? upload_size_warningAlert.alertMessageEn
-              : upload_size_warningAlert.alertMessageKr}
-          </p>
+          {isSuccess ? (
+            <p className="modal-content">
+              {isEn
+                ? upload_successAlert.alertMessageEn
+                : upload_successAlert.alertMessageKr}
+            </p>
+          ) : (
+            <p className="modal-content">
+              {isEn
+                ? upload_size_warningAlert.alertMessageEn
+                : upload_size_warningAlert.alertMessageKr}
+            </p>
+          )}
         </div>
         <div className="modal-btn-bottom">
-          <button className="ok-btn">{isEn ? ok.valueEn : ok.valueKr}</button>
+          <button className="ok-btn" onClick={closeModal}>
+            {isEn ? ok.valueEn : ok.valueKr}
+          </button>
         </div>
       </div>
     </div>

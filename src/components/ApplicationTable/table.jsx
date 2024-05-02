@@ -49,7 +49,7 @@ const Table = ({ tableData, isEn }) => {
 
   return (
     <div>
-      <table className="styled-table">
+      <table className="application-table">
         <thead>
           <tr className="">
             <th>
@@ -130,13 +130,6 @@ const Table = ({ tableData, isEn }) => {
       </div>
       {uploadModal && (
         <UploadModal setUploadModal={setUploadModal} isEn={isEn} />
-      )}
-      {modalContent && (
-        <AlertModal
-          modalContent={modalContent}
-          setModalContent={setModalContent}
-          isEn={isEn}
-        />
       )}
     </div>
   );

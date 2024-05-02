@@ -1,0 +1,50 @@
+.upload-table {
+    border-collapse: collapse;
+    margin: 4px 0 12px 0;
+    min-width: 600px;
+    text-align: start;
+}
+
+.upload-table tr td:nth-child(1) {
+    font-size: 0.7rem !important;
+    text-wrap: nowrap;
+    min-width: 200px !important;
+    padding: 12px 15px;
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #EEF0F4;
+}
+
+.upload-table tr td:nth-child(2) {
+    min-width: 550px !important;
+    padding: 12px 15px;
+    border: 1px solid #EEF0F4;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+.select-investment {}
+
+
+
+.upload-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.file-names {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.close-circle {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}

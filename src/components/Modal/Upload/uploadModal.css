@@ -36,9 +36,11 @@
     font-size: 18px;
 }
 
-.modal-btn-middle {
+.modal-upload-middle {
     border: 1px solid white;
     width: 464px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .cancel-btn {
@@ -52,12 +54,22 @@
     width: 100%;
 }
 
+.divider_modal_2 {
+    position: relative;
+    bottom: 15px;
+}
+
 .modal-upload-btn-bottom {
     margin: auto;
     display: flex;
     gap: 0.5rem;
+    position: relative;
+    bottom: 35px;
 }
 
-.table-col {
-    /* display: inline; */
+.modal-upload-suggestions {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19.5px;
+    margin-left: 18px;
 }
